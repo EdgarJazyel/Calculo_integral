@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regla de la Potencia | Integral Power</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-square-root-variable"></i>
+            <h2>Integral Power</h2>
+        </div>
+        <nav>
+            <a href="index.html#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="index.html#metodos"><i class="fa-solid fa-list"></i> Métodos</a>
+            <a href="potencia.html" style="background-color: #334155; color: #fff;"><i class="fa-solid fa-superscript"></i> Potencia</a>
+            <a href="sustitucion.html"><i class="fa-solid fa-repeat"></i> Sustitución</a>
+            <a href="partes.html"><i class="fa-solid fa-divide"></i> Por Partes</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <section class="contenido" style="margin-top: 20px;">
+            <a href="index.html" class="btn-outline" style="margin-bottom: 20px; border: none; padding: 0;">← Volver al inicio</a>
+            
+            <h2>Regla de la Potencia</h2>
+            <h3>¿Qué es?</h3>
+            <p>La regla de la potencia es uno de los métodos más utilizados para resolver integrales...</p>
+            <div class="formula">∫xⁿ dx = xⁿ⁺¹ / (n+1) + C</div>
+            
+            <h3>Calculadora</h3>
+            <input type="text" id="potenciaInput" placeholder="Ejemplo: 5x2">
+            <button onclick="resolverPotencia()">Resolver</button>
+            <div id="resultadoPotencia"></div>
+        </section>
+    </main>
+
+    <script src="codigo.js"></script>
+</body>
+</html>
