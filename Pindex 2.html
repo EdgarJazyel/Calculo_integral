@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integral Power</title>
+  <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">∫ Integral Power</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#aprende">Aprende</a>
+    <a href="#calculadora">Calculadora</a>
+    <a href="#sustitucion">Sustitución</a>
+    <a href="#partes">Por Partes</a>
+    <a href="#practica">Practica</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h1>Integral Power</h1>
+  <p>Aprende cálculo integral sin morir en el intento</p>
+  <button onclick="irCalculadora()">Empezar ahora</button>
+</section>
+
+<section id="aprende" class="card">
+  <h2>¿Qué es una integral?</h2>
+  <p>
+    Una integral sirve para encontrar áreas, acumulaciones o recuperar una función
+    original a partir de su derivada.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Regla de la Potencia</h2>
+  <p>Para resolver integrales de potencias de x:</p>
+  <ol>
+    <li>Suma 1 al exponente.</li>
+    <li>Divide entre el nuevo exponente.</li>
+    <li>Agrega la constante C.</li>
+  </ol>
+  <h3>∫xⁿ dx = xⁿ⁺¹ / (n + 1) + C</h3>
+</section>
+
+<section id="calculadora" class="card">
+  <h2>Calculadora de Integrales</h2>
+  <p>Escribe una potencia, por ejemplo: <b>x4</b>, <b>5x2</b> o <b>8x6</b></p>
+
+  <input type="text" id="expresion" placeholder="Ejemplo: 5x2">
+  <button onclick="calcularIntegral()">Resolver</button>
+
+  <div id="resultado" class="resultado"></div>
+</section>
+
+<section class="card">
+  <h2>Ejemplos Resueltos</h2>
+  <p>∫x³dx = x⁴/4 + C</p>
+  <p>∫5x²dx = 5x³/3 + C</p>
+  <p>∫7x⁸dx = 7x⁹/9 + C</p>
+</section>
+
+<section class="card">
+  <h2>Caso Especial</h2>
+  <p>Cuando el exponente es -1:</p>
+  <h3>∫1/x dx = ln|x| + C</h3>
+  <p>Aquí NO se aplica la regla de la potencia.</p>
+</section>
+
+<section id="sustitucion" class="card">
+  <h2>Método de Sustitución</h2>
+  <p>
+    El método de sustitución se usa cuando una función aparece acompañada
+    de su derivada.
+  </p>
+
+  <div class="ejemplo">
+    <h3>Ejemplo Resuelto</h3>
+    <p><strong>∫ (3x²+2)(x³+2x−1)⁵ dx</strong></p>
+
+    <p><b>Paso 1:</b> u = x³ + 2x − 1</p>
+    <p><b>Paso 2:</b> du = (3x² + 2)dx</p>
+    <p><b>Paso 3:</b> ∫u⁵du</p>
+    <p><b>Paso 4:</b> u⁶/6 + C</p>
+    <p><b>Paso 5:</b> (x³+2x−1)⁶/6 + C</p>
+  </div>
+
+  <button onclick="resolverSustitucion()">Ver procedimiento</button>
+  <div id="resultadoSustitucion" class="resultado"></div>
+</section>
+
+<section id="partes" class="card">
+  <h2>Integración por Partes</h2>
+  <p>
+    La integración por partes se usa cuando una integral contiene el producto
+    de dos funciones.
+  </p>
+
+  <div class="formula">
+    ∫ u dv = uv − ∫ v du
+  </div>
+
+  <p>Para elegir <b>u</b>, se puede usar la regla ILATE:</p>
+
+  <ul>
+    <li><b>I:</b> Inversa</li>
+    <li><b>L:</b> Logarítmica</li>
+    <li><b>A:</b> Algebraica</li>
+    <li><b>T:</b> Trigonométrica</li>
+    <li><b>E:</b> Exponencial</li>
+  </ul>
+
+  <div class="ejemplo">
+    <h3>Ejemplo Resuelto</h3>
+    <p><b>∫ x eˣ dx</b></p>
+
+    <p><b>Paso 1:</b> Elegimos u y dv</p>
+    <p>u = x</p>
+    <p>dv = eˣ dx</p>
+
+    <p><b>Paso 2:</b> Derivamos u e integramos dv</p>
+    <p>du = dx</p>
+    <p>v = eˣ</p>
+
+    <p><b>Paso 3:</b> Aplicamos la fórmula</p>
+    <p>∫ u dv = uv − ∫ v du</p>
+
+    <p><b>Paso 4:</b> Sustituimos</p>
+    <p>∫ x eˣ dx = x eˣ − ∫ eˣ dx</p>
+
+    <p><b>Paso 5:</b> Integramos</p>
+    <p>x eˣ − eˣ + C</p>
+
+    <p><b>Resultado:</b> x eˣ − eˣ + C</p>
+  </div>
+
+  <button onclick="resolverPartes()">Ver procedimiento</button>
+  <div id="resultadoPartes" class="resultado"></div>
+</section>
+
+<section id="practica" class="card">
+  <h2>Practica y Gana Puntos</h2>
+  <p>Reto: Resuelve ∫8x⁶dx</p>
+
+  <input type="text" id="respuesta" placeholder="Escribe tu respuesta">
+  <button onclick="verificarRespuesta()">Verificar</button>
+
+  <p id="mensaje"></p>
+  <p>Puntos: <span id="puntos">0</span></p>
+
+  <h3>Más ejercicios</h3>
+  <ul>
+    <li>∫ sen(3x−5) dx</li>
+    <li>∫ cos(x/3) dx</li>
+    <li>∫ 3x eˣ dx</li>
+    <li>∫ x³ ln(2x) dx</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Recursos Recomendados</h2>
+  <ul>
+    <li>GeoGebra</li>
+    <li>Wolfram Alpha</li>
+    <li>Khan Academy</li>
+    <li>YouTube Educativo</li>
+  </ul>
+</section>
+
+<section id="contacto" class="card">
+  <h2>Contacto</h2>
+</section>
+
+<footer>
+  <p>“Las matemáticas no son difíciles; solo necesitan una buena explicación.” 🚀</p>
+</footer>
+
+<script src="JS/codigo.js"></script>
+</body>
+</html>

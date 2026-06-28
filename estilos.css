@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #05051f, #1b0038, #000);
+  color: white;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7df9ff;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+nav a:hover {
+  color: #7df9ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 55px;
+  color: #b56cff;
+}
+
+.hero p {
+  font-size: 22px;
+  margin: 20px;
+}
+
+button {
+  background: linear-gradient(90deg, #7f00ff, #00d4ff);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  width: 85%;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.4);
+  animation: aparecer 1s ease;
+}
+
+.card h2 {
+  color: #7df9ff;
+  margin-bottom: 15px;
+}
+
+.card p, li {
+  line-height: 1.7;
+}
+
+input {
+  width: 80%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(122, 43, 43, 0.08);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ejemplo, .formula {
+  margin-top: 15px;
+  padding: 18px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.formula {
+  font-size: 22px;
+  color: #7df9ff;
+  font-weight: bold;
+}
+
+ul, ol {
+  margin-left: 25px;
+}
+.ejemplo, .formula {
+  margin: 20px 0;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 18px rgba(125, 249, 255, 0.25);
+}
+
+.formula {
+  text-align: center;
+  font-size: 28px;
+  color: #7df9ff;
+}
+
+.ejemplo p {
+  margin: 8px 0;
+}
+
+.card h3 {
+  color: #b56cff;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  margin: 15px 0 20px 30px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.resultado {
+  margin-top: 18px;
+  padding: 18px;
+  border-left: 5px solid #7df9ff;
+}
