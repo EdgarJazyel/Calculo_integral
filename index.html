@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integral Power | Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-square-root-variable"></i>
+            <h2>Integral Power</h2>
+        </div>
+        <nav>
+            <a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="#metodos"><i class="fa-solid fa-list"></i> Métodos</a>
+            <a href="potencia.html"><i class="fa-solid fa-superscript"></i> Potencia</a>
+            <a href="sustitucion.html"><i class="fa-solid fa-repeat"></i> Sustitución</a>
+            <a href="partes.html"><i class="fa-solid fa-divide"></i> Por Partes</a>
+            <a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <section class="hero" id="inicio">
+            <div class="hero-text">
+                <h1>Bienvenido a Integral Power</h1>
+                <p>Aprende cálculo integral de una manera sencilla, con ejemplos, ejercicios, videos, calculadoras y explicaciones paso a paso.</p>
+                <a href="#metodos" class="btn">Empezar a aprender</a>
+            </div>
+        </section>
+
+        <section class="metodos" id="metodos">
+            <h2>Selecciona un método</h2>
+            <div class="barra-metodos">
+                <a href="potencia.html" class="opcion-metodo">
+                    <i class="fa-solid fa-superscript"></i>
+                    <span>Regla de la Potencia</span>
+                </a>
+                <a href="sustitucion.html" class="opcion-metodo">
+                    <i class="fa-solid fa-repeat"></i>
+                    <span>Sustitución</span>
+                </a>
+                <a href="partes.html" class="opcion-metodo">
+                    <i class="fa-solid fa-divide"></i>
+                    <span>Por Partes</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="practica" class="contenido">
+            <h2>Practica tus conocimientos</h2>
+            <p>Resuelve el siguiente ejercicio, gana puntos y genera uno nuevo.</p>
+            <div class="ejemplo">
+                <h3>Problema</h3>
+                <p id="problema-texto">Cargando ejercicio...</p> 
+            </div>
+            <input type="text" id="respuesta" placeholder="Ejemplo: x^3+c">
+            <button onclick="verificarRespuesta()">Verificar</button>
+            <button onclick="cargarEjercicio()" class="btn-outline" style="margin-left: 10px;">Saltar Ejercicio</button>
+            <div id="mensaje"></div>
+            <br>
+            <h3>Puntos: <span id="puntos" style="color: #0284c7;">0</span></h3>
+        </section>
+
+        <section id="contacto" class="contenido contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes dudas o sugerencias? Puedes comunicarte con nosotros.</p>
+            
+            <div class="info-contacto" style="margin-bottom: 30px;">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Correo</h3>
+                    <p>integralpower@gmail.com</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Teléfono</h3>
+                    <p>+52 449 123 4567</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Ubicación</h3>
+                    <p>Aguascalientes, México</p>
+                </div>
+            </div>
+
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118949.19894458378!2d-102.378951!3d21.88234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee628bfcc035%3A0xc3f548074d32a939!2sAguascalientes%2C%20Ags.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" width="100%" height="350" style="border:0; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <footer>
+            <h2>Integral Power</h2>
+            <p>© 2026 Integral Power | Proyecto Escolar | Todos los derechos reservados.</p>
+        </footer>
+    </main>
+
+    <button id="btnArriba" onclick="volverArriba()"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="codigo.js"></script>
+</body>
+</html>
